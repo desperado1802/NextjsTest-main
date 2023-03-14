@@ -37,6 +37,15 @@ export const BodyContainer = styled.div`
   align-items: center;
 `;
 
+export const HeadingContainer = styled.div`
+  width: 100%;
+  text-align: center;
+
+  @media (max-width: 1023px) {
+    margin-top: 10px;
+  }
+`;
+
 export const StyledBackgroundContainer = styled.div`
   background-image: url(${(props) => props.src});
   background-repeat: no-repeat;
@@ -48,8 +57,6 @@ export const StyledBackgroundContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin: 25px;
-  // gap: 30px;
-  // background-color: pink;
 
   @media (max-width: 1023px) {
     flex-direction: column;
@@ -65,7 +72,6 @@ export const ContentsContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  // background-color: blue;
   align-items: start;
   justify-content: start;
   gap: 30px;
@@ -78,12 +84,6 @@ export const ContentsContainer = styled.div`
 
 export const StyledTextContentContainer = styled(TextContentContainer)`
   display: block;
-`;
-
-export const HeadingContainer = styled.div`
-  width: 100%;
-
-  text-align: center;
 `;
 
 export const Header = styled.h1`
