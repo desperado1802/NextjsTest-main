@@ -1,7 +1,14 @@
 import { Hero } from "../sections";
 
 const heroProps = {
-  image: { src: "/img/video.png", alt: "", width: "310", height: "470" },
+  image: {
+    src: "/img/video.png",
+    alt: "",
+    width: "310",
+    height: "470",
+    cursor: "pointer",
+  },
+  backgroundImage: { src: "/img/background.png" },
   title: "Managed agency selection",
   description: "Strengthen your onboarding process",
   ctaText: "Start",

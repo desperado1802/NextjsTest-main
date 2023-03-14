@@ -1,34 +1,39 @@
 import Image from "next/image";
 
 import {
-  StyledTextContainer,
-  StyledContainer,
-  StyledGetStartedBtn,
-  StyledTitle,
-  StyledDescription,
-  StyledCTAContainer,
   StyledImageContainer,
   StyledBackgroundContainer,
-  Headerr,
-  StyledHeaderContainer,
-  StyledHeader,
   ContentsContainer,
   BodyContainer,
   HeadingContainer,
   Header,
   Paragraph,
+  StyledTextContentContainer,
+  //Not used code from the previous project
+  // StyledTextContainer,
+  // StyledContainer,
+  // StyledGetStartedBtn,
+  // StyledTitle,
+  // StyledDescription,
+  // StyledCTAContainer,
 } from "./elements";
 
-import { TextContentContainer } from "../../collections/TextContentContainer/TextContentContainer";
-
-export const Hero = ({ image, title, description, ctaText, ...props }) => {
+export const Hero = ({
+  image,
+  backgroundImage,
+  title,
+  description,
+  ctaText,
+  ...props
+}) => {
   return (
     <BodyContainer>
       <HeadingContainer>
         <Header>{title}</Header>
         <Paragraph>{description}</Paragraph>
       </HeadingContainer>
-      <StyledBackgroundContainer src={"./background.png"}>
+
+      <StyledBackgroundContainer src={backgroundImage.src}>
         <StyledImageContainer>
           <Image
             // layout="responsive"
@@ -39,7 +44,7 @@ export const Hero = ({ image, title, description, ctaText, ...props }) => {
           />
         </StyledImageContainer>
         <ContentsContainer>
-          <TextContentContainer />
+          <StyledTextContentContainer />
         </ContentsContainer>
       </StyledBackgroundContainer>
     </BodyContainer>

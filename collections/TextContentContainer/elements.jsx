@@ -1,14 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  box-sizing: border-box;
   padding: 10px;
-  height: 110px;
+  height: 130px;
   width: 450px;
-  background-color: #eaebec;
+  background-color: rgba(241, 241, 241, 255);
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  // margin: auto;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: #ddd;
+  }
 `;
 
 export const TextContainer = styled.div`
