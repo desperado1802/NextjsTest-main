@@ -26,6 +26,7 @@ export const Header = styled.h4`
   font-weight: 600;
   font-family: Poppins;
   margin: 0;
+  transition: all 0.3s ease-in-out;
 `;
 
 export const ParagraphOne = styled.p`
