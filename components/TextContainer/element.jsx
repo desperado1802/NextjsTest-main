@@ -28,3 +28,20 @@ export const StyledParagraphTwo = styled(
     font-size: 0.93rem;
   }
 `;
+
+export const StyledHeaderMain = styled(
+  forwardRef((props, ref) => <h1 {...props} ref={ref} />)
+)`
+  font-family: Poppins;
+  font-size: 2rem;
+  line-height: 1rem;
+  font-weight: 600;
+`;
+
+export const StyledDescription = styled(
+  forwardRef((props, ref) => <p {...props} ref={ref} />)
+)`
+  font-family: Poppins;
+  font-size: 1rem;
+  line-height: 1rem;
+`;

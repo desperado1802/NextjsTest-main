@@ -2,12 +2,14 @@ import styled from "styled-components";
 import { TextContentContainer } from "~/collections";
 
 // Not used code from the previous project
-// import {
-//   Button,
-//   SectionContainer,
-//   SectionBigHeading,
-//   SectionSubheading,
-// } from "~/components";
+import {
+  // Button,
+  // SectionContainer,
+  // SectionBigHeading,
+  // SectionSubheading,
+  MainHeader,
+  Description,
+} from "~/components";
 
 export const StyledImageContainer = styled(({ ...props }) => (
   <div {...props} />
@@ -51,6 +53,23 @@ export const HeadingContainer = styled.div`
 
   @media (max-width: 1023px) {
     margin-top: 10px;
+  }
+`;
+
+export const StyledMainHeader = styled((props) => <MainHeader {...props} />)`
+  margin: 0;
+  white-space: nowrap;
+
+  @media (max-width: 500px) {
+    font-size: 1.5rem;
+  }
+`;
+
+export const StyledDescription = styled((props) => <Description {...props} />)`
+  font-weight: 400;
+
+  @media (max-width: 500px) {
+    font-size: 0.8rem;
   }
 `;
 
@@ -101,29 +120,29 @@ export const StyledTextContentContainer = styled(TextContentContainer)`
   display: block;
 `;
 
-export const Header = styled.h1`
-  font-family: Poppins;
-  font-size: 2rem;
-  line-height: 1rem;
-  font-weight: 600;
-  margin: 0;
-  white-space: nowrap;
+// export const Header = styled.h1`
+//   font-family: Poppins;
+//   font-size: 2rem;
+//   line-height: 1rem;
+//   font-weight: 600;
+//   margin: 0;
+//   white-space: nowrap;
 
-  @media (max-width: 500px) {
-    font-size: 1.5rem;
-  }
-`;
+//   @media (max-width: 500px) {
+//     font-size: 1.5rem;
+//   }
+// `;
 
-export const Paragraph = styled.p`
-  font-family: Poppins;
-  font-size: 1rem;
-  line-height: 1rem;
-  font-weight: 400;
+// export const Paragraph = styled.p`
+//   font-family: Poppins;
+//   font-size: 1rem;
+//   line-height: 1rem;
+//   font-weight: 400;
 
-  @media (max-width: 500px) {
-    font-size: 0.8rem;
-  }
-`;
+//   @media (max-width: 500px) {
+//     font-size: 0.8rem;
+//   }
+// `;
 
 //Not used code from the previous project
 

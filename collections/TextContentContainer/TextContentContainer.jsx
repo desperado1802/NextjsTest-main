@@ -5,14 +5,13 @@ import {
   StyledCardHeader,
   StyledCardParagraphOne,
   StyledCardParagraphTwo,
+  StyledIconContainer,
   TextContainer,
 } from "./elements";
 
 import DesignServicesIcon from "@mui/icons-material/DesignServices";
 import ScreenSearchDesktopIcon from "@mui/icons-material/ScreenSearchDesktop";
 import Diversity3Icon from "@mui/icons-material/Diversity3";
-
-import { IconWrap } from "../../components/IconContainer/elements";
 
 export const TextContentContainer = () => {
   const [clickedContainer, setClickedContainer] = useState("");
@@ -70,7 +69,7 @@ export const TextContentContainer = () => {
             setClickedContainer(item.header);
           }}
         >
-          <IconWrap>{item.icon}</IconWrap>
+          <StyledIconContainer>{item.icon}</StyledIconContainer>
           <TextContainer>
             <StyledCardHeader
               style={

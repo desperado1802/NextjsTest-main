@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
-import { Headers, ParagraphOne, ParagraphTwo } from "~/components";
+import {
+  CardHeader,
+  ParagraphOne,
+  ParagraphTwo,
+  IconContainer,
+} from "~/components";
 
 export const ContentContainer = styled.div`
   display: flex;
@@ -34,9 +39,13 @@ export const Container = styled.div`
 export const TextContainer = styled.div`
   height: 100%;
   width: 100%;
+
+  @media (max-width: 500px) {
+    padding-bottom: 7px;
+  }
 `;
 
-export const StyledCardHeader = styled((props) => <Headers {...props} />)`
+export const StyledCardHeader = styled((props) => <CardHeader {...props} />)`
   margin: 0;
 `;
 
@@ -50,4 +59,11 @@ export const StyledCardParagraphTwo = styled((props) => (
   <ParagraphTwo {...props} />
 ))`
   display: inline;
+`;
+
+export const StyledIconContainer = styled((props) => (
+  <IconContainer {...props} />
+))`
+  height: 100px;
+  width: 130px;
 `;

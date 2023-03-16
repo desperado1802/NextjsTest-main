@@ -1,11 +1,12 @@
+import { forwardRef } from "react";
 import styled from "styled-components";
 
-export const IconWrap = styled.div`
+export const IconWrap = styled(
+  forwardRef((props, ref) => <div {...props} ref={ref} />)
+)`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
-  width: 130px;
   margin: 0;
   color: black;
   text-align: center;

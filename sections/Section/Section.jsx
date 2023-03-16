@@ -6,9 +6,11 @@ import {
   ContentsContainer,
   BodyContainer,
   HeadingContainer,
+  StyledTextContentContainer,
+  StyledMainHeader,
+  StyledDescription,
   Header,
   Paragraph,
-  StyledTextContentContainer,
   //Not used code from the previous project
   // StyledTextContainer,
   // StyledContainer,
@@ -29,8 +31,8 @@ export const Section = ({
   return (
     <BodyContainer>
       <HeadingContainer>
-        <Header>{title}</Header>
-        <Paragraph>{description}</Paragraph>
+        <StyledMainHeader>{title}</StyledMainHeader>
+        <StyledDescription>{description}</StyledDescription>
       </HeadingContainer>
 
       <StyledBackgroundContainer src={backgroundImage.src}>
