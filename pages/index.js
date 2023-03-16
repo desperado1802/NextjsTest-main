@@ -1,4 +1,4 @@
-import { Hero } from "../sections";
+import { Section } from "../sections";
 
 const heroProps = {
   image: {
@@ -26,7 +26,7 @@ export default function Home() {
         />
       </head>
       <div>
-        <Hero {...heroProps} />
+        <Section {...heroProps} />
         {/** Other sections */}
       </div>
     </>

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import {
   Container,
-  Header,
-  ParagraphOne,
-  ParagraphThree,
-  ParagraphTwo,
+  ContentContainer,
+  StyledCardHeader,
+  StyledCardParagraphOne,
+  StyledCardParagraphTwo,
   TextContainer,
 } from "./elements";
 
@@ -48,7 +48,7 @@ export const TextContentContainer = () => {
   };
 
   return (
-    <>
+    <ContentContainer>
       {TextData.map((item, idx) => (
         <Container
           key={idx}
@@ -56,11 +56,11 @@ export const TextContentContainer = () => {
             clickedContainer === item.header
               ? {
                   border: "2px solid rgba(170,207,254,255)",
-                  width: idx === 0 ? "390px" : idx === 1 ? "420px" : "450px",
+                  width: idx === 0 ? "87%" : idx === 1 ? "93.5%" : "100%",
                 }
               : {
                   border: "2px solid transparent",
-                  width: idx === 0 ? "390px" : idx === 1 ? "420px" : "450px",
+                  width: idx === 0 ? "87%" : idx === 1 ? "93.5%" : "100%",
                 }
           }
           onClick={(event) => {
@@ -72,7 +72,7 @@ export const TextContentContainer = () => {
         >
           <IconWrap>{item.icon}</IconWrap>
           <TextContainer>
-            <Header
+            <StyledCardHeader
               style={
                 clickedContainer === item.header
                   ? {
@@ -83,13 +83,17 @@ export const TextContentContainer = () => {
               }
             >
               {item.header}
-            </Header>
-            <ParagraphOne>{item.paragraphOne} </ParagraphOne>
-            <ParagraphTwo>{item.paragraphTwo}</ParagraphTwo>
-            <ParagraphThree>{item.paragraphThree}</ParagraphThree>
+            </StyledCardHeader>
+            <StyledCardParagraphOne>
+              {item.paragraphOne}{" "}
+            </StyledCardParagraphOne>
+            <StyledCardParagraphTwo>{item.paragraphTwo}</StyledCardParagraphTwo>
+            <StyledCardParagraphOne>
+              {item.paragraphThree}
+            </StyledCardParagraphOne>
           </TextContainer>
         </Container>
       ))}
-    </>
+    </ContentContainer>
   );
 };

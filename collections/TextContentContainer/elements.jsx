@@ -1,5 +1,19 @@
 import styled from "styled-components";
 
+import { Headers, ParagraphOne, ParagraphTwo } from "~/components";
+
+export const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 30px;
+
+  @media (max-width: 1023px) {
+    padding-top: 30px;
+  }
+`;
+
 export const Container = styled.div`
   box-sizing: border-box;
   padding: 10px;
@@ -22,25 +36,18 @@ export const TextContainer = styled.div`
   width: 100%;
 `;
 
-export const Header = styled.h4`
-  font-weight: 600;
-  font-family: Poppins;
+export const StyledCardHeader = styled((props) => <Headers {...props} />)`
   margin: 0;
-  transition: all 0.3s ease-in-out;
 `;
 
-export const ParagraphOne = styled.p`
-  font-family: Poppins;
+export const StyledCardParagraphOne = styled((props) => (
+  <ParagraphOne {...props} />
+))`
   display: inline;
 `;
 
-export const ParagraphTwo = styled.p`
-  font-family: Poppins;
-  font-weight: 600;
-  display: inline;
-`;
-
-export const ParagraphThree = styled.p`
-  font-family: Poppins;
+export const StyledCardParagraphTwo = styled((props) => (
+  <ParagraphTwo {...props} />
+))`
   display: inline;
 `;

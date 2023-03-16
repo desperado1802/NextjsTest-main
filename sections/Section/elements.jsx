@@ -23,6 +23,14 @@ export const StyledImageContainer = styled(({ ...props }) => (
   & > span {
     cursor: pointer;
   }
+
+  @media (max-width: 1023px) {
+    width: 250px;
+  }
+
+  @media (max-width: 420px) {
+    width: 220px;
+  }
 `;
 
 /*My code */
@@ -63,22 +71,29 @@ export const StyledBackgroundContainer = styled.div`
     background-size: contain;
     height: 100%;
     width: 100%;
-    min-width: 734px;
   }
 `;
 
 export const ContentsContainer = styled.div`
-  width: 500px;
+  width: 450px;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: start;
-  gap: 30px;
 
   @media (max-width: 1023px) {
-    margin-top: 40px;
-    margin-left: 40px;
+    width: 400px;
+    margin-top: 15px;
+  }
+
+  @media (max-width: 500px) {
+    width: 400px;
+  }
+  @media (max-width: 420px) {
+    width: 350px;
+    padding: 10px;
+    margin-top: 5px;
   }
 `;
 
@@ -93,6 +108,10 @@ export const Header = styled.h1`
   font-weight: 600;
   margin: 0;
   white-space: nowrap;
+
+  @media (max-width: 500px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const Paragraph = styled.p`
@@ -100,6 +119,10 @@ export const Paragraph = styled.p`
   font-size: 1rem;
   line-height: 1rem;
   font-weight: 400;
+
+  @media (max-width: 500px) {
+    font-size: 0.8rem;
+  }
 `;
 
 //Not used code from the previous project

@@ -18,7 +18,7 @@ import {
   // StyledCTAContainer,
 } from "./elements";
 
-export const Hero = ({
+export const Section = ({
   image,
   backgroundImage,
   title,
